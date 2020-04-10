@@ -28,21 +28,11 @@ collections:
           - {label: Approach Element Two Body, name: approach_element_two_body, widget: text}
           - {label: Approach Element Three Title, name: approach_element_three_title, widget: string}
           - {label: Approach Element Three Body, name: approach_element_three_body, widget: text}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-      # - label: "Locations Page"
-      #   name: "locations"
-      #   file: "site/content/locations.yml"
-      #   fields:
-      #     - {label: Title, name: title, widget: string}
-      #     - {label: Intro, name: intro, widget: markdown}
-      #     - label: Locations
-      #       name: locations
-      #       widget: list
-      #       fields:
-      #         - {label: Name, name: name, widget: string}
-      #         - {label: Address, name: address, widget: string}
+      - label: "Contact"
+        name: "contact"
+        file: "/data/contact.yml"
+        preview_path: "/contact"
+        editor:
+             preview: false
+        fields:
+          - {label: Contact Form Prompt, name: prompt, widget: text}

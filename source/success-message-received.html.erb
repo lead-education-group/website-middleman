@@ -1,3 +1,7 @@
+---
+layout: false
+---
+
 <!doctype html>
 <html>
   <head>
@@ -5,25 +9,22 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= current_page.data.title %></title>
+    <title>Thank you!</title>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "jquery" %>
-    <%= javascript_include_tag "site" %>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/8a16057c58.js" crossorigin="anonymous"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <% if current_page.data.background_color == 'white' %>
-    <body style="background-color: #ffffff">
-  <% elsif current_page.data.background_color == 'light-blue' %>
-    <body style="background-color: #DBEFFF">
-  <% else %>
     <body>
-  <% end %>
-      <%= partial "partials/header" %>
-      <%= yield %>
-      <%= partial "partials/footer" %>
+      <div class="success-message-recieved-container">
+        <div class="success-message-recieved">
+          <%= image_tag 'lead_logo_small.png', { id:"logo", alt:"Lead Education Group" } %>
+          <h3>Thank you!</h3>
+          <p>Your message has been well received. We will get back to you as soon as possible.</p>
+          <a href="/index.html"> Back to our site</a>
+        </div>
+      </div>
     </body>
 </html>

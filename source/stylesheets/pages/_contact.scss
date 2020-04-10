@@ -1,0 +1,34 @@
+.lead-contact-form {
+  padding: 15px;
+  max-width: 650px;
+  padding: 15px;
+  background: $background-color;
+  border-radius: 4px;
+  box-shadow: 0 -1px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
+  background-color: #F9FDFF;
+
+  label {
+    color: $font-color;
+  }
+
+  .form-control {
+    color: $light-font-color;
+
+    &:focus {
+      border-color: rgba($yellow, 1);
+      box-shadow: 0 0 0 0.2rem rgba($yellow,.25)
+    }
+  }
+}
+
+@media (min-width: 321px) {
+  .lead-contact-form {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .lead-contact-form {
+    width: 650px;
+  }
+}

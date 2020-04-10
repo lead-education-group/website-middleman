@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="180px" viewBox="0 0 1440 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <rect fill="#FFFFFF" x="0" y="0" width="1440" height="180"></rect>
+      <path d="M1440,180 L0,180 L0,0 L120,21.3 C240,43 480,85 720,96 C960,107 1200,85 1320,74.7 L1440,64 L1440,180 Z" id="Combined-Shape" fill="#DBEFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

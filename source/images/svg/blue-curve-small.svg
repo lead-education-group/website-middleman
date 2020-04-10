@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720px" height="90px" viewBox="0 0 720 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <rect fill="#FFFFFF" x="0" y="0" width="720" height="90"></rect>
+      <path d="M720,90 L0,90 L0,0 L60,10.65 C120,21.5 240,42.5 360,48 C480,53.5 600,42.5 660,37.35 L720,32 L720,90 Z" id="Combined-Shape" fill="#DBEFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

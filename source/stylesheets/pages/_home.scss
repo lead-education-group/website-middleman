@@ -1,0 +1,256 @@
+@import "../config/colors";
+
+#hero-container {
+  margin: auto;
+  max-width: 1600px;
+}
+
+.lead-hero {
+  color: $font-color;
+  padding-top: 20px;
+  padding-bottom: 200px;
+  margin-bottom: 30px;
+
+  .lead-hero-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:before {
+      content: '';
+      display: block;
+      overflow-x: hidden;
+      height: 900px;
+      width: 900px;
+      position: absolute;
+      top: 60px;
+      right: -100px;
+      z-index: -1;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('/images/svg/blob.svg');
+    }
+
+
+    .lead-hero-text {
+      width: 100%;
+      padding: 30px 0;
+    }
+  }
+}
+
+.lead-hero-image {
+  height: 300px;
+  width: 100%;
+  position: relative;
+
+  img {
+    border-radius: 4px;
+    box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
+    position: absolute;
+  }
+
+  #hero-image-1 {
+    position: relative;
+    width: 100%;
+  }
+
+  #hero-image-2 {
+    display: none;
+  }
+  #hero-image-3 {
+    display: none;
+  }
+}
+
+.inner-text.center {
+  text-align: center;
+}
+
+.lead-column {
+  margin-top: 30px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .header-icon {
+    align-self: center;
+    height: 118px;
+    width: 118px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &#apple {
+      background-image: url('/images/svg/apple.svg');
+    }
+
+    &#ribbon {
+      background-image: url('/images/svg/ribbon.svg');
+    }
+
+    &#globe {
+      background-image: url('/images/svg/globe-icon.svg');
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .lead-hero .lead-hero-inner:before {
+    top: -160px;
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .lead-hero .lead-hero-inner:before {
+    height: 800px;
+    width: 800px;
+    top: -90px;
+    right: -340px;
+  }
+  .lead-hero-image {
+    #hero-image-1 {
+      position: absolute;
+      display: block;
+      width: 370px;
+      top: -100px;
+      right: 0;
+      z-index: 2;
+    }
+
+    #hero-image-2 {
+      display: block;
+      width: 300px;
+      z-index: 3;
+      right: 70px;
+      top: 200px;
+    }
+  }
+  #hero-container {
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
+    background-repeat: no-repeat;
+    background-position: top 0 left 50px;
+    background-size: cover;
+  }
+  .lead-hero {
+    padding-top: 75px;
+    color: $font-color;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .lead-hero-inner {
+      display: flex;
+      flex-direction: row;
+
+      .lead-hero-text {
+        width: 40%;
+      }
+
+      .lead-hero-image {
+        width: 60%;
+        img {
+          // display: none;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .lead-hero .lead-hero-inner:before {
+    top: -75px;
+    right: -260px;
+  }
+  .lead-hero-image {
+    max-width: 414px;
+
+    #hero-image-1 {
+      position: absolute;
+      display: block;
+      width: 370px;
+      top: -74px;
+      right: 0;
+      z-index: 2;
+    }
+
+    #hero-image-2 {
+      display: block;
+      width: 300px;
+      z-index: 3;
+      right: 70px;
+      top: 226px;
+    }
+  }
+  #hero-container {
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .lead-hero .lead-hero-inner:before {
+    right: 0;
+  }
+  .lead-hero-image {
+    max-width: inherit;
+
+    #hero-image-3 {
+      display: block;
+      height: 400px;
+      top: -24px;
+      left: -5px;
+      z-index: 5;
+    }
+  }
+  #hero-container {
+    background-size: contain;
+  }
+  .lead-hero {
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    .lead-hero-inner {
+      .lead-hero-text {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+// Extra-extra large devices (large desktops, 1600px and up)
+@media (min-width: 1600px) {
+  #home-blob {
+    right: 15%
+  }
+  #hero-container {
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 1) 100%),image-url('04.jpg');
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 1) 100%),image-url('04.jpg');
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 1) 100%),image-url('04.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+  }
+}

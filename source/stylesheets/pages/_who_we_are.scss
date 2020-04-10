@@ -1,0 +1,48 @@
+.values-list {
+  color: $font-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .list-section {
+    width: 100%;
+    padding: 0 15px;
+
+    div {
+      padding: 15px 0;
+      height: auto;
+      position: relative;
+      padding-left: 40px;
+
+      i {
+        color: $yellow;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.centered-paragrah {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  max-width: 520px;
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .values-list {
+    flex-direction: row;
+
+    .list-section {
+      width: 50%;
+
+      div {
+        height: 150px;
+      }
+    }
+  }
+}

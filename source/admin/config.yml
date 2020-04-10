@@ -21,13 +21,19 @@ collections:
           - {label: Challenge Body, name: challenge_body, widget: text}
           - {label: Opportunity Title, name: opportunity_title, widget: string}
           - {label: Opportunity Body, name: opportunity_body, widget: text}
-          # - label: Team
-          #   name: team
-          #   widget: list
-          #   fields:
-          #     - {label: Name, name: name, widget: string}
-          #     - {label: Position, name: position, widget: string}
-          #     - {label: Photo, name: photo, widget: image}
+          - {label: Approach Title, name: approach_title, widget: string}
+          - {label: Approach Element One Title, name: approach_element_one_title, widget: string}
+          - {label: Approach Element One Body, name: approach_element_one_body, widget: text}
+          - {label: Approach Element Two Title, name: approach_element_two_title, widget: string}
+          - {label: Approach Element Two Body, name: approach_element_two_body, widget: text}
+          - {label: Approach Element Three Title, name: approach_element_three_title, widget: string}
+          - {label: Approach Element Three Body, name: approach_element_three_body, widget: text}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
       # - label: "Locations Page"
       #   name: "locations"
       #   file: "site/content/locations.yml"

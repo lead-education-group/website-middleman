@@ -9,8 +9,9 @@ collections:
     name: "pages"
     files:
       - label: "Home"
-        name: "Home Page"
+        name: "home"
         file: "/data/home.yml"
+        preview_path: "/index"
         fields:
           - {label: Header, name: header, widget: string}
           - {label: Header Description, name: header_description, widget: string}

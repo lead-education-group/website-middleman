@@ -1,10 +1,5 @@
 @import "../config/colors";
 
-#hero-container {
-  margin: auto;
-  max-width: 1600px;
-}
-
 .lead-hero {
   color: $font-color;
   padding-top: 20px;
@@ -136,14 +131,7 @@
       top: 200px;
     }
   }
-  #hero-container {
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
-    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
-    background-repeat: no-repeat;
-    background-position: top 0 left 50px;
-    background-size: cover;
-  }
+
   .lead-hero {
     padding-top: 75px;
     color: $font-color;
@@ -196,14 +184,6 @@
       top: 226px;
     }
   }
-  #hero-container {
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
-    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.1) 100%),image-url('04.jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
-  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -222,9 +202,7 @@
       z-index: 5;
     }
   }
-  #hero-container {
-    background-size: contain;
-  }
+
   .lead-hero {
     h1 {
       font-size: 2.2rem;
@@ -237,20 +215,5 @@
         padding-right: 15px;
       }
     }
-  }
-}
-
-// Extra-extra large devices (large desktops, 1600px and up)
-@media (min-width: 1600px) {
-  #home-blob {
-    right: 15%
-  }
-  #hero-container {
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 1) 100%),image-url('04.jpg');
-    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 1) 100%),image-url('04.jpg');
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 1) 100%),image-url('04.jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
   }
 }

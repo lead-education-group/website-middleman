@@ -62,6 +62,10 @@ a {
   background: $light-blue;
 }
 
+.bg-very-light-blue {
+  background: rgba($light-blue, 0.3);
+}
+
 .bg-background-color {
   background: $background-color;
 }
@@ -289,6 +293,10 @@ a {
 .cta {
   /*min-height: 52px;
   height: 52px;*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
@@ -329,10 +337,20 @@ a {
   box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
   border-color: none;
 
+  &.donate {
+    background: linear-gradient(to right, #9189FF, #948BFF);
+    color: rgb(240,240,240) !important;
+  }
+
   &:hover {
     box-shadow: 0 6px 20px rgba(126,87,88,.1), 0 6px 10px rgba(0,0,0,.08);
     color: $font-color !important;
     opacity: 0.9;
+  }
+
+  &.donate:hover {
+    background: linear-gradient(to right, #9189FF, #948BFF);
+    color: rgb(240,240,240) !important;
   }
 }
 
@@ -428,7 +446,7 @@ a {
   z-index: -3;
 }
 footer {
-  padding: 30px;
+  padding: 60px 30px 30px 30px;
   text-align: center;
   color: rgb(230,230,230);
   position: relative;
@@ -451,6 +469,7 @@ footer {
 
   p {
     margin-bottom: 0;
+    font-size: 12px
   }
 
   .footer-inner {
@@ -461,6 +480,10 @@ footer {
 
   h1,h2,h3,h4,h5,h6,p {
     color: rgb(230,230,230) !important;
+  }
+
+  h6 {
+    font-size: 16px;
   }
 
   a {

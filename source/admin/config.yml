@@ -12,11 +12,15 @@ collections:
         name: "home"
         file: "/data/home.yml"
         preview_path: "/index"
+        editor:
+             preview: false
         fields:
           - {label: Header, name: header, widget: string}
           - {label: Header Description, name: header_description, widget: string}
           - {label: Challenge Title, name: challenge_title, widget: string}
           - {label: Challenge Body, name: challenge_body, widget: text}
+          - {label: Opportunity Title, name: opportunity_title, widget: string}
+          - {label: Opportunity Body, name: opportunity_body, widget: text}
           # - label: Team
           #   name: team
           #   widget: list

@@ -10,23 +10,21 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
 
     &:before {
       content: '';
       display: block;
       overflow-x: hidden;
-      height: 110vw;
-      width: 110vw;
+      height: 900px;
+      width: 900px;
       position: absolute;
-      bottom: -20vw;
+      top: 60px;
       right: -100px;
       z-index: -1;
-      transform: rotate(15deg);
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url('/images/svg/bg_purple_red.svg');
+      background-image: url('/images/svg/blob-purple.svg');
     }
 
 
@@ -89,33 +87,23 @@
 .statement {
   margin: 0 auto;
   max-width: 600px;
-  padding: 30px 0;
+  padding: 30px 0 60px 0;
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .lead-main .lead-main-inner:before {
-    height: 700px;
-    width: 700px;
-    position: absolute;
-    bottom: -200px;
-    right: -100px;
-    z-index: -1;
-    transform: rotate(15deg);
+    top: -160px;
   }
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   .lead-main .lead-main-inner:before {
-    height: 600px;
-    width: 600px;
-    position: absolute;
-    top: -80px;
-    bottom: initial;
-    right: -160px;
-    z-index: -1;
-    transform: none;
+    height: 800px;
+    width: 800px;
+    top: -90px;
+    right: -340px;
   }
   .lead-main-image {
     margin-left: 30px;
@@ -150,14 +138,8 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .lead-main .lead-main-inner:before {
-    height: 700px;
-    width: 700px;
-    position: absolute;
-    top: -200px;
-    bottom: initial;
-    right: -160px;
-    z-index: -1;
-    transform: none;
+    top: -75px;
+    right: -260px;
   }
   .lead-main-image {
     max-width: 414px;
@@ -167,9 +149,7 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .lead-main .lead-main-inner:before {
-    right: -120px;
-    height: 800px;
-    width: 800px;
+    right: 0;
   }
   .lead-main-image {
     max-width: 530px;

@@ -33,7 +33,7 @@ background_color: "light-blue"
   <section aria-label="second" class="section-after-header">
     <div class="container mb-5">
       <div class="section-after-header--inner">
-        <form class="lead-contact-form" action="https://formspree.io/mgelzlwo" method="POST">
+        <form class="lead-contact-form" name="contact" data-netlify="true" method="POST">
 
           <div class="form-group">
             <label for="exampleFormControlInput1">Name *</label>
@@ -69,6 +69,8 @@ background_color: "light-blue"
             <label for="message">Message *</label>
             <textarea name="message" class="form-control" id="message" rows="3" required></textarea>
           </div>
+
+          <input type="hidden" name="subject" value="Contact Form from LeadEducationGroup.com" >
 
           <div>
             <button type="submit" class="cta cta-primary" style="border:none;width:100%;margin-top:30px;">Send</button>

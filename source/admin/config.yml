@@ -14,6 +14,8 @@ collections:
         fields:
           - {label: Header, name: header, widget: string}
           - {label: Header Description, name: header_description, widget: string}
+          - {label: Challenge Title, name: challenge_title, widget: string}
+          - {label: Challenge Body, name: challenge_body, widget: markdown}
           # - label: Team
           #   name: team
           #   widget: list

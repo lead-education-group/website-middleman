@@ -200,8 +200,9 @@ a {
   }
 }
 
-.margin-top-90 {
-  margin-top: 90px;
+.section-second-home {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .row.direction-reverse-on-small {
@@ -655,7 +656,7 @@ footer {
     position: absolute;
     top: 60px;
     right: -100px;
-    z-index: -1;
+    z-index: -1000;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -676,6 +677,9 @@ footer {
 
 // Everything except iPhone 5c, iPhone SE, an other very small devices
 @media (min-width: 321px) {
+  .section-second-home {
+    margin-top: 45px;
+  }
   .section-after-header {
     margin-top: 20px;
 
@@ -688,6 +692,9 @@ footer {
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  .section-second-home {
+    margin-top: 90px;
+  }
   .full-width-wave-above-section {
     margin-top: -100px;
     top: -40px;
@@ -826,5 +833,9 @@ footer {
         z-index: 2;
         padding-bottom: 0;
     }
+  }
+  .section-second-home {
+    margin-top: 90px;
+    margin-bottom: 0;
   }
 }

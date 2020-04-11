@@ -4,7 +4,6 @@
   color: $font-color;
   padding-top: 20px;
   padding-bottom: 0;
-  margin-bottom: 30px;
 
   .lead-hero-inner {
     display: flex;
@@ -82,6 +81,7 @@
 }
 
 #globe-image {
+  display: none;
   width: 100%;
   max-width: 520px;
   height: 350px;
@@ -98,6 +98,9 @@
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  #globe-image {
+    display: block;
+  }
   .lead-hero-image {
     #hero-image-1 {
       position: absolute;
@@ -151,7 +154,7 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .lead-hero {
-    padding-bottom: 200px;
+    padding-bottom: 180px;
   }
   .lead-hero-image {
     max-width: 414px;
@@ -220,6 +223,8 @@
         padding-top: 30px;
         padding-bottom: 30px;
         padding-right: 15px;
+        position: relative;
+        left: -24px;
       }
     }
   }

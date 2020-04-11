@@ -644,8 +644,8 @@ footer {
   position: absolute;
   width:100vw;
   height: 100vh;
-  z-index: -1;
-  overflow-x: hidden;
+  z-index: -1000;
+  overflow: hidden;
 
   &:before {
     content: '';
@@ -723,7 +723,7 @@ footer {
     right: -340px;
   }
   .lead-nav {
-    padding: 0;
+    padding: 0 8px;
     height: 108px;
 
     &.bg-nav-collasped {

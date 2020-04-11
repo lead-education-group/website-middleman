@@ -11,23 +11,6 @@
     align-items: center;
     flex-direction: column;
 
-    &:before {
-      content: '';
-      display: block;
-      overflow-x: hidden;
-      height: 900px;
-      width: 900px;
-      position: absolute;
-      top: 60px;
-      right: -100px;
-      z-index: -1;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url('/images/svg/blob-purple.svg');
-    }
-
-
     .lead-main-text {
       width: 100%;
       padding: 30px 0;
@@ -44,6 +27,7 @@
 
 .executive-director-container {
   position: relative;
+
     &:after {
     content: '';
     position: absolute;
@@ -65,10 +49,14 @@
 
   p {
     margin: 0;
+  }
 
-    strong {
-      color: $font-color;
-    }
+  h4 {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: $font-color;
   }
 
   img {
@@ -85,6 +73,7 @@
 }
 
 .statement {
+  border-top: 1px solid rgba($light-font-color, 0.25);
   margin: 0 auto;
   max-width: 600px;
   padding: 30px 0 60px 0;
@@ -92,19 +81,10 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .lead-main .lead-main-inner:before {
-    top: -160px;
-  }
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-  .lead-main .lead-main-inner:before {
-    height: 800px;
-    width: 800px;
-    top: -90px;
-    right: -340px;
-  }
   .lead-main-image {
     margin-left: 30px;
     width: 60%;
@@ -137,10 +117,6 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .lead-main .lead-main-inner:before {
-    top: -75px;
-    right: -260px;
-  }
   .lead-main-image {
     max-width: 414px;
   }
@@ -148,9 +124,6 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .lead-main .lead-main-inner:before {
-    right: 0;
-  }
   .lead-main-image {
     max-width: 530px;
   }

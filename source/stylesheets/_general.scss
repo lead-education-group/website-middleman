@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@400;700&display=swap');
 @import "config/colors";
+
 
 body {
   position: relative;
@@ -6,22 +8,22 @@ body {
 }
 
 header {
-  background: $background-color;
+  background: transparent;
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Lora', serif;
   color: $font-color !important;
 }
 
 p {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $light-font-color !important;
 }
 
 a {
   text-decoration: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $font-color;
 
   &:hover {
@@ -60,14 +62,17 @@ a {
 
 .bg-light-blue {
   background: $light-blue;
+  z-index: -2;
 }
 
 .bg-very-light-blue {
   background: rgba($light-blue, 0.3);
+  z-index: -2;
 }
 
 .bg-background-color {
   background: $background-color;
+  z-index: -2;
 }
 
 .bg-dark-blue {
@@ -75,11 +80,13 @@ a {
 }
 
 .bg-light-green {
-  background: #E0FCF4;
+  background: #E9FCF8;
+  z-index: -2;
 }
 
 .bg-light-red {
   background: rgba(#FBDCD6, 0.3);
+  z-index: -2;
 }
 
 .full-width-wave,.full-width-wave-below-section {
@@ -160,16 +167,6 @@ a {
     border-radius: 4px;
     box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
   }
-}
-
-#globe-image {
-  width: 100%;
-  max-width: 520px;
-  height: 450px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-image: url('/images/svg/globe.svg');
 }
 
 .section-central-image, .section-image {
@@ -313,6 +310,7 @@ a {
   cursor: pointer;
   transition: all .15s ease;
   height: fit-content;
+  text-align: center;
 
   &:hover {
     text-decoration: none;
@@ -336,25 +334,29 @@ a {
 }
 
 .cta-primary {
-  background: linear-gradient(to left, #ffb600, #FFC400);
-  color: $secondary-font-color !important;
+  background: $secondary-font-color;
+  color: $background-color !important;
   box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
-  border-color: none;
+  border: 2px solid $secondary-font-color;
+  // font-family: "Lora", serif;
+  font-weight: 400;
+  border: none;
 
   &.donate {
-    background: linear-gradient(to right, #9189FF, #948BFF);
-    color: rgb(240,240,240) !important;
+    background: linear-gradient(to left, #ffb600, #FFC400);
+    color: $secondary-font-color !important;
+    font-weight: 700;
+    border: none;
   }
 
   &:hover {
     box-shadow: 0 6px 20px rgba(126,87,88,.1), 0 6px 10px rgba(0,0,0,.08);
-    color: $font-color !important;
+    color: $background-color !important;
     opacity: 0.9;
   }
 
   &.donate:hover {
-    background: linear-gradient(to right, #9189FF, #948BFF);
-    color: rgb(240,240,240) !important;
+
   }
 }
 
@@ -365,6 +367,13 @@ a {
 
 
 .lead-nav {
+  transition: background 0.5s ease;
+  padding: 0;
+
+  &.bg-nav-collasped {
+    background: $background-color;
+  }
+
   .navbar-toggler {
     border: 1px solid $font-color;
 
@@ -473,13 +482,22 @@ footer {
 
   p {
     margin-bottom: 0;
-    font-size: 12px
+    font-size: 16px
   }
 
   .footer-inner {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .row {
+      margin-bottom: 30px;
+    }
+
+    .info-block {
+      width: 170px;
+      margin: 0 auto 30px auto;
+    }
   }
 
   h1,h2,h3,h4,h5,h6,p {
@@ -563,25 +581,26 @@ footer {
     position: absolute;
     left: 0;
     overflow-x: hidden;
-    height: 10vw;
-    width: 101%;
-    z-index: 0;
+    height: 200px;
+    width: 100%;
+    z-index: -1;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-image: url('/images/svg/green-curve-small.svg');
+    background: linear-gradient(178deg, #ffffff 0%, #ffffff 43%, #E9FCF8 43%, #E9FCF8 100%);
+    // background-image: url('/images/svg/green-curve-small.svg');
   }
 
   &:before {
-    top: -6vw;
+    top: -110px;
   }
 
   &:after {
-    bottom: -6vw;
+    bottom: -100px;
     -moz-transform: scaleY(-1);
     -o-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
+    transform: scaleY(-1) scaleX(-1);;
     filter: FlipV;
     -ms-filter: "FlipV";
   }
@@ -618,6 +637,43 @@ footer {
   }
 }
 
+.bg-hero {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow-x: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    overflow-x: hidden;
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    top: 60px;
+    right: -100px;
+    z-index: -1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.blue:before {
+    background-image: url('/images/svg/blob.svg');
+  }
+
+  &.purple:before {
+    background-image: url('/images/svg/blob-purple.svg');
+  }
+
+  &.green:before {
+    background-image: url('/images/svg/blob-green.svg');
+  }
+}
+
 // Everything except iPhone 5c, iPhone SE, an other very small devices
 @media (min-width: 321px) {
   .section-after-header {
@@ -643,8 +699,30 @@ footer {
   }
 }
 
+.navbar-collapse {
+  margin: 16px 0;
+
+  li {
+    margin: 8px 0;
+  }
+}
+
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .bg-hero:before {
+    height: 800px;
+    width: 800px;
+    top: -90px;
+    right: -340px;
+  }
+  .lead-nav {
+    padding: 0;
+    height: 108px;
+
+    &.bg-nav-collasped {
+      background: inherit;
+    }
+  }
   .lead-dropdown-menu {
     border: 1px rgba($font-color, 0.1) solid;
     -webkit-box-shadow: 0 -1px 14px rgba(126, 87, 88, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
@@ -704,8 +782,12 @@ footer {
     background-image: url('/images/svg/footer.svg');
   }
 
+  footer .footer-inner .info-block {
+    width: 100%;
+  }
+
   .svg-green-borders-section:before, .svg-green-borders-section:after {
-    background-image: url('/images/svg/green-curve.svg');
+    // background-image: url('/images/svg/green-curve.svg');
   }
 
   .section-after-header:before {
@@ -719,15 +801,16 @@ footer {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .full-width-wave-above-section {
-    // margin-top: -80px;
+  .bg-hero:before {
+    top: -75px;
+    right: -260px;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .full-width-wave-above-section {
-    // margin-top: -100px;
+  .bg-hero:before {
+    right: 0;
   }
   .section-after-header {
     margin-top: 90px;

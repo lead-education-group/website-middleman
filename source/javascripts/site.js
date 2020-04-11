@@ -1,6 +1,12 @@
 const toggleNavbar = function () {
   $(".navbar-toggler").click(function() {
     $(".navbar-collapse").slideToggle();
+
+    var inner = $(this).find("i").first();
+    inner.toggleClass("fas fa-times");
+    inner.toggleClass("fas fa-bars");
+
+    $("nav").toggleClass('bg-nav-collasped');
   });
 }
 

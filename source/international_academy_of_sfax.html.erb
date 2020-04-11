@@ -7,26 +7,20 @@ bottom_div_color: "white"
 
 <main role="main">
 
-  <div class="bg-background-color">
-    <div class="container">
-      <section class="lead-section" aria-label="Lead Eduction Group Hero">
-          <div class="lead-section-inner" style="max-width: 560px;">
-            <div class="lead-section-text">
-              <p class="top-accent-text">Pursuit of excellence</p>
-              <h1>International Acacdemy of Sfax</h1>
-              <div class="center-piece">
-                <div class="backdrop wider">
-                  <i class="fas fa-graduation-cap fa-2x"></i>
-                </div>
-              </div>
-              <p style="max-width: 520px; margin-left: auto; margin-right: auto;">We exist to empower students to live exceptional lives locally and globally through their education in Sfax, Tunisia</p>
-            </div>
+  <section class="lead-main" aria-label="Lead Eduction Group Hero">
+      <div class="container">
+        <div class="lead-main-inner">
+          <div class="lead-main-text">
+            <h1>Our Approach</h1>
+            <p>LEAD Education Group believes that education is a primary means to future success for individuals, societies and for entire nations.</p>
+            <p>Through the vehicle of international schools, students are given opportunity to become successful and influential leaders who will promote systemic and positive change in their societies and nations.</p>
           </div>
-      </section>
-    </div>
-  </div>
+          <%= image_tag '0.jpg', class: 'lead-main-image', alt: 'International Academy of Sfax' %>
+        </div>
+      </div>
+    </section>
 
-  <section aria-label="first" class="section-after-header">
+  <section aria-label="first" class="banner-section second">
     <div class="container">
       <div class="section-after-header--inner">
         <%= image_tag '0.jpg', class: 'section-central-image mb-5' %>
@@ -93,7 +87,7 @@ bottom_div_color: "white"
           </div>
         </div>
         <div class="col-sm-12 col-md-6 banner-d-flex">
-          <%= image_tag '08.jpg', class: 'section-image' %>
+          <%= image_tag 'iasfax.jpg', class: 'section-image', alt: 'International Academy of Sfax' %>
         </div>
       </div>
     </div>
@@ -127,4 +121,6 @@ bottom_div_color: "white"
     </div>
   </section>
 </main>
+
+<div class="bg-hero green"></div>
 

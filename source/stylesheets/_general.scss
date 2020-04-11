@@ -837,5 +837,9 @@ footer {
   .section-second-home {
     margin-top: 90px;
     margin-bottom: 0;
+
+    &.lg-some {
+      margin-top: 30px;
+    }
   }
 }

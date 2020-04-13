@@ -23,6 +23,10 @@
   position: relative;
   border-radius: 4px;
   box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
+
+  &.shadow--stronger {
+     box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.18);
+  }
 }
 
 .executive-director-container {
@@ -95,6 +99,7 @@
 
     h1 {
       font-size: 2.2rem;
+      // margin-bottom: 1rem;
     }
 
     .lead-main-inner {

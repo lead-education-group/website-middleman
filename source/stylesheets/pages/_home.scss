@@ -62,21 +62,6 @@
     align-self: center;
     height: 118px;
     width: 118px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &#apple {
-      background-image: url('/images/svg/apple.svg');
-    }
-
-    &#ribbon {
-      background-image: url('/images/svg/ribbon.svg');
-    }
-
-    &#globe {
-      background-image: url('/images/svg/globe-icon.svg');
-    }
   }
 }
 
@@ -85,6 +70,8 @@
   width: 100%;
   max-width: 520px;
   height: 350px;
+  top: 0;
+  position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -100,6 +87,7 @@
 @media (min-width: 768px) {
   #globe-image {
     display: block;
+    height: 450px;
   }
   .lead-hero-image {
     #hero-image-1 {
@@ -145,14 +133,13 @@
       }
     }
   }
-
-  #globe-image {
-    height: 450px;
-  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  #globe-image {
+    top: -48px;
+  }
   .lead-hero {
     padding-bottom: 180px;
   }

@@ -15,6 +15,23 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name='keywords' content="<%= current_page.data.tags %>">
+    <meta name='description' content="<%= current_page.data.description %>">
+    <meta name='subject' content="<%= data.general.site_name %>">
+    <meta name='copyright' content='<%= data.general.site_name %>'>
+    <meta name='language' content='EN'>
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="<%= current_page.data.title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= data.general.root %><%= current_page.url %>" />
+    <meta property="og:image" content="<%= data.general.root %>/images/<%= current_page.data.image %>" />
+    <meta property="og:description" content="<%= current_page.data.description %>" />
+    <meta property="og:site_name" content="<%= data.general.site_name %>" />
+
+    <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon.png">
+
     <title><%= current_page.data.title %></title>
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
@@ -22,6 +39,7 @@
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "jquery" %>
     <%= javascript_include_tag "site" %>
+    <%= favicon_tag 'images/favicon.ico' %>
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>

@@ -19,7 +19,6 @@
 }
 
 .lead-hero-image {
-  height: 300px;
   width: 100%;
   position: relative;
 
@@ -90,6 +89,8 @@
     height: 450px;
   }
   .lead-hero-image {
+    height: 300px;
+
     #hero-image-1 {
       position: absolute;
       display: block;

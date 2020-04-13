@@ -192,6 +192,7 @@ a {
 .section-image {
   width: 100%;
   max-width: 520px;
+  margin-bottom: 32px;
 }
 
 .banner-section {
@@ -682,7 +683,7 @@ footer {
   left: 0;
   position: absolute;
   width:100vw;
-  height: 100vh;
+  height: 150vh;
   z-index: -1000;
   overflow: hidden;
 
@@ -709,7 +710,7 @@ footer {
     background-image: url('/images/svg/blob-purple.svg');
   }
 
-  &.green:before {
+  &.red:before {
     background-image: url('/images/svg/blob-red.svg');
   }
 }
@@ -732,6 +733,10 @@ footer {
 @media (min-width: 321px) {
   .section-second-home {
     margin-top: 45px;
+
+    &.lg-some {
+      margin-top: 30px;
+    }
   }
   .section-after-header {
     margin-top: 20px;
@@ -769,6 +774,12 @@ footer {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .max-width-420-md {
+    max-width: 420px;
+  }
+  .section-image {
+    margin-bottom: 0;
+  }
   .bg-hero:before {
     height: 800px;
     width: 800px;

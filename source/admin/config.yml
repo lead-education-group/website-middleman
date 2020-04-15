@@ -39,6 +39,9 @@ collections:
   - label: "Analytics"
     name: "analytics"
     files:
+      - label: "Analytics"
+        name: "analytics"
+        file: "/data/analytics.yml"
       fields:
         - {label: test, name: test, widget: string}
 

@@ -35,30 +35,18 @@
   </style>
 
   <script>
-    class Comp1 extends React.Component {
-     constructor(props) {
-        super(props);
-        this.loadAnalyticsLink = this.loadAnalyticsLink.bind(this);
-     }
-
-     componentDidMount() {
-        window.addEventListener('load', this.loadAnalyticsLink);
-     }
-
-     componentWillUnmount() {
-       window.removeEventListener('load', this.loadAnalyticsLink)
-     }
-
-     loadAnalyticsLink() {
+    document.addEventListener("DOMContentLoaded",function(){
       console.log('laoaofjadsklf')
-      var nav = document.getElementsByTagName('nav')[0];
-      var list = nav.getElementsByTagName('ul')[0];
+      var navs = document.getElementsByTagName('nav');
 
-      var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">'
+      if (navs) {
+        var list = nav[0].getElementsByTagName('ul')[0];
 
-      list.insertAdjacentHTML('beforeend', analyticsItem);
-     }
-    }
+        var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">'
+
+        list.insertAdjacentHTML('beforeend', analyticsItem);
+      }
+    });
   </script>
 </body>
 </html>

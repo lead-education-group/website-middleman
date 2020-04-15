@@ -63,7 +63,7 @@
     color: $font-color;
   }
 
-  img {
+  img.Stephen-Beck {
     // position: absolute;
     margin-bottom: 1rem;
     // min-height: 100%;
@@ -74,6 +74,11 @@
     border-radius: 50%;
     box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);
   }
+}
+
+img.Stephen-Beck-Signature {
+  max-width: 220px;
+  opacity: 0.7;
 }
 
 .statement {

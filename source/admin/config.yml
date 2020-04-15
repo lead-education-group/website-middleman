@@ -38,7 +38,7 @@ collections:
           - {label: Contact Form Prompt, name: prompt, widget: text}
   - label: "Analytics"
     name: "analytics"
-      files:
-        fields:
-          - {label: test, name: test, widget: string}
+    files:
+      fields:
+        - {label: test, name: test, widget: string}
 

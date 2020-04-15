@@ -7,8 +7,47 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <a href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090" target="_blank">
+    <div class="analytics-link-container">
+      <span>Go to Google Analytics Dashboard</span>
+    </div>
+  </a>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.4.0/dist/netlify-cms.js"></script>
 
-  <script src="javascripts/netlify-cms.js"></script>
 
+  <!-- Google Analytics nav item -->
+  <style>
+    .analytics-link-container {
+      cursor: pointer;
+      height: 56px;
+      width: 100vw;
+      background: #EFF0F4;
+    }
+    .analytics-link-container span {
+      margin: auto;
+      cursor: pointer;
+      color: rgb(58, 105, 199);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 500;
+      display: inline-flex;
+      -webkit-box-align: center;
+      align-items: center;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      border-radius: 5px;
+      background: none;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .analytics-link-container:hover span {
+      opacity: 0.8;
+    }
+  </style>
 </body>
 </html>

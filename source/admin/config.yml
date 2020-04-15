@@ -36,3 +36,4 @@ collections:
              preview: false
         fields:
           - {label: Contact Form Prompt, name: prompt, widget: text}
+  - label: "Analytics"

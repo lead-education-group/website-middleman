@@ -47,14 +47,73 @@
   </style>
 
   <script>
+    // document.addEventListener('readystatechange', (event) => {
+    //     console.log(` doc readystate: ${document.readyState}\n`);
+    // });
+
+    // window.addEventListener('readystatechange', (event) => {
+    //     console.log(`wind readystate: ${document.readyState}\n`);
+    // });
+
+    // window.addEventListener("load", function(event) {
+    //     console.log("Toutes les ressources sont chargées !");
+    //   });
+
+    // document.addEventListener("readystatechange",function(){
+    //   if (document.readyState === "complete") {
+
+    //     var navs = document.getElementsByTagName('nav');
+
+    //     if (navs.length) {
+    //       var list = navs[0].getElementsByTagName('ul')[0];
+
+    //       var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">Analytics</a>'
+
+    //       if (document.getElementsByClass('analytics-link').length != 0) {
+    //         list.insertAdjacentHTML('beforeend', analyticsItem);
+    //       }
+    //     }
+    //   }
+    // });
+
     document.addEventListener("DOMContentLoaded",function(){
-      var link = document.querySelector("a[href='#/collections/analytics']");
+      var open = window.XMLHttpRequest.prototype.open,
+          send = window.XMLHttpRequest.prototype.send,
+          onReadyStateChange;
 
-      link.addEventListener("click",function(e){
-        e.preventDefault();
+      function openReplacement(method, url, async, user, password) {
+          var syncMode = async !== false ? 'async' : 'sync';
+          console.warn(
+              'Preparing ' +
+              syncMode +
+              ' HTTP request : ' +
+              method +
+              ' ' +
+              url
+          );
+          return open.apply(this, arguments);
+      }
 
-        window.open('https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090', '_blank');
-      });
+      function sendReplacement(data) {
+          console.warn('Sending HTTP request data : ', data);
+
+          if(this.onreadystatechange) {
+              this._onreadystatechange = this.onreadystatechange;
+          }
+          this.onreadystatechange = onReadyStateChangeReplacement;
+
+          return send.apply(this, arguments);
+      }
+
+      function onReadyStateChangeReplacement() {
+          console.warn('HTTP request ready state changed : ' + this.readyState);
+          if(this._onreadystatechange) {
+              return this._onreadystatechange.apply(this, arguments);
+          }
+      }
+
+      window.XMLHttpRequest.prototype.open = openReplacement;
+      window.XMLHttpRequest.prototype.send = sendReplacement;
     });
   </script>
 </body>

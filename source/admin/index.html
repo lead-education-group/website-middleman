@@ -47,15 +47,29 @@
   </style>
 
   <script>
+    document.addEventListener('readystatechange', (event) => {
+        console.log(`readystate: ${document.readyState}\n`);
+    });
+
+    window.addEventListener('readystatechange', (event) => {
+        console.log(`readystate: ${document.readyState}\n`);
+    });
+
+    window.addEventListener("load", function(event) {
+        console.log("Toutes les ressources sont chargées !");
+      });
+
     document.addEventListener("DOMContentLoaded",function(){
       var navs = document.getElementsByTagName('nav');
 
-      if (navs) {
+      if (navs.length) {
         var list = navs[0].getElementsByTagName('ul')[0];
 
         var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">Analytics</a>'
 
-        list.insertAdjacentHTML('beforeend', analyticsItem);
+        if (document.getElementsByClass('analytics-link').length != 0) {
+          list.insertAdjacentHTML('beforeend', analyticsItem);
+        }
       }
     });
   </script>

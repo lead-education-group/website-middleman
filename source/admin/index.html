@@ -32,17 +32,28 @@
       font-size: 16px;
       font-weight: 500;
     }
+
+    .analytics-link:hover {
+      color: rgb(58, 105, 199);
+    }
+
+    .analytics-link span {
+      display: inline-block;
+      line-height: 16px;
+      width: 22px;
+      height: 24px;
+      font-size: 26px;
+    }
   </style>
 
   <script>
     document.addEventListener("DOMContentLoaded",function(){
-      console.log('laoaofjadsklf')
       var navs = document.getElementsByTagName('nav');
 
       if (navs) {
-        var list = nav[0].getElementsByTagName('ul')[0];
+        var list = navs[0].getElementsByTagName('ul')[0];
 
-        var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">'
+        var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">Analytics</a>'
 
         list.insertAdjacentHTML('beforeend', analyticsItem);
       }

@@ -47,32 +47,43 @@
   </style>
 
   <script>
-    document.addEventListener('readystatechange', (event) => {
-        console.log(` doc readystate: ${document.readyState}\n`);
-    });
+    // document.addEventListener('readystatechange', (event) => {
+    //     console.log(` doc readystate: ${document.readyState}\n`);
+    // });
 
-    window.addEventListener('readystatechange', (event) => {
-        console.log(`wind readystate: ${document.readyState}\n`);
-    });
+    // window.addEventListener('readystatechange', (event) => {
+    //     console.log(`wind readystate: ${document.readyState}\n`);
+    // });
 
-    window.addEventListener("load", function(event) {
-        console.log("Toutes les ressources sont chargées !");
+    // window.addEventListener("load", function(event) {
+    //     console.log("Toutes les ressources sont chargées !");
+    //   });
+
+    // document.addEventListener("readystatechange",function(){
+    //   if (document.readyState === "complete") {
+
+    //     var navs = document.getElementsByTagName('nav');
+
+    //     if (navs.length) {
+    //       var list = navs[0].getElementsByTagName('ul')[0];
+
+    //       var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">Analytics</a>'
+
+    //       if (document.getElementsByClass('analytics-link').length != 0) {
+    //         list.insertAdjacentHTML('beforeend', analyticsItem);
+    //       }
+    //     }
+    //   }
+    // });
+
+    document.addEventListener("DOMContentLoaded",function(){
+      var link = document.querySelectorAll("a[href='#/collections/analytics']");
+
+      link.addEventListener("DOMContentLoaded",function(e){
+        e.preventDefault();
+
+        window.open('https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090', '_blank');
       });
-
-    document.addEventListener("readystatechange",function(){
-      if (document.readyState === "complete") {
-        var navs = document.getElementsByTagName('nav');
-
-        if (navs.length) {
-          var list = navs[0].getElementsByTagName('ul')[0];
-
-          var analyticsItem = '<a class="analytics-link" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090">Analytics</a>'
-
-          if (document.getElementsByClass('analytics-link').length != 0) {
-            list.insertAdjacentHTML('beforeend', analyticsItem);
-          }
-        }
-      }
     });
   </script>
 </body>

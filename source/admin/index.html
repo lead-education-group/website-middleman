@@ -17,7 +17,10 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.4.0/dist/netlify-cms.js"></script>
 
-
+  <script>
+    console.log('starting script');
+    netlifyIdentity.on('login', user => console.log('login', user));
+  </script>
   <!-- Google Analytics banner link style-->
   <style>
     .analytics-link-container {

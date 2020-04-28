@@ -14,7 +14,6 @@ tags: "Lead Education Group, Lead Education Group Home, LEAD Education, Lead Edu
     <div class="container">
       <div class="lead-hero-inner">
         <div class="lead-hero-text">
-          <!-- <p class="top-accent-text">Lead Education Group</p> -->
           <h1><%= data.home.header %></h1>
           <p><%= data.home.header_description %></p>
           <p class="mt-4"><a class="cta cta-primary cta-fit-width" href="international_academy_of_sfax.html" role="button">Learn about Schools of Distinction</a></p>
@@ -38,7 +37,7 @@ tags: "Lead Education Group, Lead Education Group Home, LEAD Education, Lead Edu
           <div class="inner-text">
             <p class="top-accent-text">The Challenge</p>
             <h3><%= data.home.challenge_title %></h3>
-            <%= data.home.challenge_body %>
+            <%= markdown(data.home.challenge_body) %>
         </div>
       </div>
     </div>
@@ -51,7 +50,7 @@ tags: "Lead Education Group, Lead Education Group Home, LEAD Education, Lead Edu
           <div class="inner-text max-width-420-md">
             <p class="top-accent-text">The Opportunity</p>
             <h3><%= data.home.opportunity_title %></h3>
-            <%= data.home.opportunity_body %>
+            <%= markdown(data.home.opportunity_body) %>
           </div>
         </div>
         <div class="col-sm-12 col-md-6 banner-d-flex">
@@ -77,7 +76,7 @@ tags: "Lead Education Group, Lead Education Group Home, LEAD Education, Lead Edu
             <div class="header-icon" id="apple"></div>
             <div class="inner-text">
               <h4><%= data.home.approach_element_one_title %></h4>
-              <%= data.home.approach_element_one_body %>
+              <%= markdown(data.home.approach_element_one_body) %>
             </div>
           </div>
         </div>
@@ -87,7 +86,7 @@ tags: "Lead Education Group, Lead Education Group Home, LEAD Education, Lead Edu
             <div class="header-icon" id="ribbon"></div>
             <div class="inner-text">
               <h4><%= data.home.approach_element_two_title %></h4>
-              <%= data.home.approach_element_two_body %>
+              <%= markdown(data.home.approach_element_two_body) %>
             </div>
           </div>
         </div>
@@ -97,7 +96,7 @@ tags: "Lead Education Group, Lead Education Group Home, LEAD Education, Lead Edu
             <div class="header-icon" id="globe"></div>
             <div class="inner-text">
               <h4><%= data.home.approach_element_three_title %></h4>
-              <%= data.home.approach_element_three_body %>
+              <%= markdown(data.home.approach_element_three_body) %>
             </div>
           </div>
         </div>

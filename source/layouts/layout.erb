@@ -34,14 +34,14 @@
 
     <title><%= current_page.data.title %></title>
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "jquery" %>
     <%= javascript_include_tag "site" %>
     <%= favicon_tag 'images/favicon.ico' %>
 
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <% if current_page.path == 'index.html' %>
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <% end %>
   </head>
     <body>
       <%= partial "partials/header" %>

@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
 media_folder: "source/images" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
 collections:
@@ -18,16 +17,39 @@ collections:
           - {label: Header, name: header, widget: string}
           - {label: Header Description, name: header_description, widget: string}
           - {label: Challenge Title, name: challenge_title, widget: string}
-          - {label: Challenge Body, name: challenge_body, widget: text}
+          - {label: Challenge Body, name: challenge_body, widget: markdown}
           - {label: Opportunity Title, name: opportunity_title, widget: string}
-          - {label: Opportunity Body, name: opportunity_body, widget: text}
+          - {label: Opportunity Body, name: opportunity_body, widget: markdown}
           - {label: Approach Title, name: approach_title, widget: string}
           - {label: Approach Element One Title, name: approach_element_one_title, widget: string}
-          - {label: Approach Element One Body, name: approach_element_one_body, widget: text}
+          - {label: Approach Element One Body, name: approach_element_one_body, widget: markdown}
           - {label: Approach Element Two Title, name: approach_element_two_title, widget: string}
-          - {label: Approach Element Two Body, name: approach_element_two_body, widget: text}
+          - {label: Approach Element Two Body, name: approach_element_two_body, widget: markdown}
           - {label: Approach Element Three Title, name: approach_element_three_title, widget: string}
-          - {label: Approach Element Three Body, name: approach_element_three_body, widget: text}
+          - {label: Approach Element Three Body, name: approach_element_three_body, widget: markdown}
+      - label: "Who we are"
+        name: "who_we_are"
+        file: "/data/who_we_are.yml"
+        preview_path: "/who_we_are"
+        editor:
+             preview: false
+        fields:
+          - {label: Header Description, name: header_description, widget: markdown}
+          - {label: Letter Section Title, name: letter_section_title, widget: string}
+          - {label: Letter Section Body, name: letter_section_body, widget: markdown}
+      - label: "Our Approach/ IA Sfax"
+        name: "what_we_do"
+        file: "/data/what_we_do.yml"
+        preview_path: "/what_we_do"
+        editor:
+             preview: false
+        fields:
+          - {label: Header Description, name: header_description, widget: markdown}
+          - {label: Section One Title, name: section_one_title, widget: string}
+          - {label: Section One Body Body, name: section_one_body, widget: markdown}
+          - {label: Section Two Title, name: section_two_title, widget: string}
+          - {label: Section Two Body Body, name: section_one_body, widget: markdown}
+          - {label: Learn More Prompt, name: learn_more_prompt, widget: string}
       - label: "Contact"
         name: "contact"
         file: "/data/contact.yml"

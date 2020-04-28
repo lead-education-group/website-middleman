@@ -37,7 +37,7 @@ collections:
           - {label: Header Description, name: header_description, widget: markdown}
           - {label: Letter Section Title, name: letter_section_title, widget: string}
           - {label: Letter Section Body, name: letter_section_body, widget: markdown}
-      - label: "Our Approach/ IA Sfax"
+      - label: "Our Approach - International Academy of Sfax"
         name: "what_we_do"
         file: "/data/what_we_do.yml"
         preview_path: "/what_we_do"

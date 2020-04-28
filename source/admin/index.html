@@ -7,39 +7,59 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Google Analytics banner link -->
-  <a href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a100723444w229134551p215942090" target="_blank">
-    <div class="analytics-link-container">
-      <span>Go to Google Analytics Dashboard</span>
-    </div>
-  </a>
-
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.4.0/dist/netlify-cms.js"></script>
 
   <script>
     console.log('starting script');
-    netlifyIdentity.on('login', user => console.log('login', user));
+
+    const showGoogleAnalyticsLink = () => {
+      const asideList = document.querySelector("aside ul");
+      const listItemLink = "<li><a class='analytics-link' target='_blank' href='https://analytics.google.com/analytics/web/#/report-home/a163377452w228716135p215672123'><span><svg width='24px' height='18px' viewBox='0 0 24 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M15.6,11.6363636 L17.4,11.6363636 C17.7,11.6363636 18,11.3454545 18,11.0545455 L18,4.94545455 C18,4.65454545 17.7,4.36363636 17.4,4.36363636 L15.6,4.36363636 C15.3,4.36363636 15,4.65454545 15,4.94545455 L15,11.0545455 C15,11.3454545 15.3,11.6363636 15.6,11.6363636 L15.6,11.6363636 Z M20.1,11.6363636 L21.9,11.6363636 C22.2,11.6363636 22.5,11.3454545 22.5,11.0545455 L22.5,0.581818182 C22.5,0.290909091 22.2,0 21.9,0 L20.1,0 C19.8,0 19.5,0.290909091 19.5,0.581818182 L19.5,11.0545455 C19.5,11.3454545 19.8,11.6363636 20.1,11.6363636 Z M6.6,11.6363636 L8.4,11.6363636 C8.7,11.6363636 9,11.3454545 9,11.0545455 L9,7.85454545 C9,7.56363636 8.7,7.27272727 8.4,7.27272727 L6.6,7.27272727 C6.3,7.27272727 6,7.56363636 6,7.85454545 L6,11.0545455 C6,11.3454545 6.3,11.6363636 6.6,11.6363636 Z M11.1,11.6363636 L12.9,11.6363636 C13.2,11.6363636 13.5,11.3454545 13.5,11.0545455 L13.5,2.03636364 C13.5,1.74545455 13.2,1.45454545 12.9,1.45454545 L11.1,1.45454545 C10.8,1.45454545 10.5,1.74545455 10.5,2.03636364 L10.5,11.0545455 C10.5,11.3454545 10.8,11.6363636 11.1,11.6363636 L11.1,11.6363636 Z M23.25,14.5454545 L3,14.5454545 L3,0.727272727 C3,0.325454545 2.664375,0 2.25,0 L0.75,0 C0.335625,0 0,0.325454545 0,0.727272727 L0,16 C0,16.8031818 0.67171875,17.4545455 1.5,17.4545455 L23.25,17.4545455 C23.664375,17.4545455 24,17.1290909 24,16.7272727 L24,15.2727273 C24,14.8709091 23.664375,14.5454545 23.25,14.5454545 Z'></path></svg></span>Google Analytics</a></li>"
+
+      asideList.insertAdjacentHTML('beforeend', listItemLink);
+    }
+
+    netlifyIdentity.on('login', showGoogleAnalyticsLink());
   </script>
   <!-- Google Analytics banner link style-->
   <style>
-    .analytics-link-container {
-      cursor: pointer;
-      height: 56px;
-      width: 100vw;
-      background: rgb(232, 245, 254);
+    .analytics-link {
       display: flex;
-      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+      -webkit-box-align: center;
       align-items: center;
-    }
-    .analytics-link-container span {
-      color: rgb(58, 105, 199);
-      font-size: 15px;
+      padding: 8px 12px;
+      border-left: 2px solid rgb(255, 255, 255);
+      text-decoration: none;
+      color: rgb(121, 130, 145);
     }
 
-    .analytics-link-container:hover span {
-      opacity: 0.8;
+    .analytics-link:hover {
+      color: rgb(58, 105, 199);
+      background-color: rgb(232, 245, 254);
+      border-left-color: rgb(72, 99, 198);
     }
+
+    .analytics-link span {
+      margin-right: 8px;
+      display: inline-block;
+      line-height: 0;
+      width: 24px;
+      height: 24px;
+      transform: rotate(0deg);
+    }
+
+    .analytics-link span svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .analytics-link span svg path {
+      fill: currentcolor;
+    }
+
   </style>
 </body>
 </html>

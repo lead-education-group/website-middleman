@@ -75,8 +75,12 @@ var showNavDropdownOnResize = function () {
   checkWidthAndToggleDropdown();
 };
 
+var updateFooterYear = function () {
+  document.getElementById('footer-year').innerHTML = new Date().getFullYear();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  updateFooterYear();
   toggleNavbar();
-  // dropdownHover(); // Kept commented out as in the original
   showNavDropdownOnResize();
 });

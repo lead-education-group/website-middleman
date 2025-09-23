@@ -1,0 +1,6 @@
+[build]
+  publish = "build"
+
+[[edge_functions]]
+path = "/*"
+function = "force-https"

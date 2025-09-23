@@ -7,12 +7,10 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-# Ensure _headers and _redirects files are included so that Netlify puts these http headers on our website in production.
-# And handles http-https redirects by not showing redirection link in response.
+# Ensure _headers file are included so that Netlify puts these http headers on our website in production.
 after_build do |builder|
-  # Copy _headers and _redirects file to build directory
+  # Copy _headers file to build directory
   FileUtils.cp('source/_headers', 'build/_headers')
-  FileUtils.cp('source/_redirects', 'build/_redirects')
 end
 
 # Layouts

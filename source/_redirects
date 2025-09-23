@@ -1,2 +1,2 @@
-# Force HTTPS
-http://*leadeducationgroup.com/*   https://leadeducationgroup.com   301!
+# Force HTTP to redirect to HTTPS root
+http://*leadeducationgroup.com/*   https://leadeducationgroup.com?   301!

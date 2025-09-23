@@ -7,7 +7,7 @@ export default async (request) => {
     return new Response(null, {
       status: 301,
       headers: {
-        Location: url.toString(),
+        Location: "https://leadeducationgroup.com",
       },
     });
   }

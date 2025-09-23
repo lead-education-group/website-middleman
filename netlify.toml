@@ -4,3 +4,7 @@
 [[edge_functions]]
   path = "/*"
   function = "force-https"
+
+[[edge_functions]]
+  path = "/test"
+  function = "hello"

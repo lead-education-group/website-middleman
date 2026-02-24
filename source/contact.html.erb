@@ -31,7 +31,7 @@ tags: "Lead Education Group, Lead Education Group Contact"
     <section aria-label="second" class="section-after-header">
       <div class="container pb-5">
         <div class="section-after-header--inner">
-          <form class="lead-contact-form" action="/success-message-received.html" name="contact" data-netlify="true" method="POST" netlify-honeypot="myBotField">
+          <form class="lead-contact-form" action="https://formspree.io/f/mgelzlwo" method="POST">
 
             <div class="form-group">
               <label for="exampleFormControlInput1">Name *</label>
@@ -48,10 +48,7 @@ tags: "Lead Education Group, Lead Education Group Contact"
               <input type="text" name="position" class="form-control" id="position">
             </div>
 
-            <div class="form-group d-none">
-              <label>My bot field</label>
-              <input type="email" name="myBotField" />
-            </div>
+            <input type="text" name="_gotcha" style="display:none" />
 
             <div class="form-group">
               <label for="email">Email *</label>
@@ -73,7 +70,8 @@ tags: "Lead Education Group, Lead Education Group Contact"
               <textarea name="message" class="form-control" id="message" rows="3" required></textarea>
             </div>
 
-            <input type="hidden" name="subject" value="Contact Form from LeadEducationGroup.com" >
+            <input type="hidden" name="_subject" value="Contact Form from LeadEducationGroup.com" >
+            <input type="hidden" name="_next" value="<%= data.general.root %>/success-message-received.html" >
 
             <div>
               <button type="submit" class="cta cta-primary" style="border:none;width:100%;margin-top:30px;">Send</button>

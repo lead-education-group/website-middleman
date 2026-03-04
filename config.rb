@@ -7,12 +7,6 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-# Ensure _headers file is included so that Netlify puts these http headers on our website in production.
-after_build do |builder|
-  # Copy _headers file to build directory
-  FileUtils.cp('source/_headers', 'build/_headers')
-end
-
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 

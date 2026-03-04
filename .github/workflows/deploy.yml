@@ -22,7 +22,12 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7.8'
-          bundler-cache: true
+
+      - name: Update RubyGems
+        run: gem update --system 3.4.22
+
+      - name: Install dependencies
+        run: bundle install
 
       - name: Build site
         run: bundle exec middleman build
